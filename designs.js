@@ -6,8 +6,8 @@
 
 
 function makeGrid() {
-var rows = $('#inputHeight').val();
-var columns = $('#inputWidth').val();
+const rows = $('#inputHeight').val();
+const columns = $('#inputWidth').val();
 
 // Your code goes here!
 //create the grid
