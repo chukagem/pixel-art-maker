@@ -17,4 +17,4 @@ For specific, detailed instructions, look at the project instructions in the [Ud
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
 
 ## Project Link
-https://github.com/chukagem/pixel-art-maker.git
+https://chukagem.github.io/pixel-art-maker/
