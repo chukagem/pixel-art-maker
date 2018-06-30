@@ -8,29 +8,31 @@
 function makeGrid() {
 const rows = $('#inputHeight').val();
 const columns = $('#inputWidth').val();
+const myTable = $("#pixelCanvas");
 
 // Your code goes here!
 //create the grid
 $("tr").remove();
-for (var i = 1; i <= rows; i++) {
-    $("#pixelCanvas").append("<tr></tr>");
-    for (var j = 1; j <= columns; j++) {
+for (let i = 1; i <= rows; i++) {
+    myTable.append("<tr></tr>");
+    for (let j = 1; j <= columns; j++) {
       $('tr').filter(':last').append('<td></td>');
     }
   }
 //add color to the cells on clicking
 var $on_off = true;
 var cellColor;
-$('#pixelCanvas').on('click','td', function(event){
+myTable.on('click','td', function(event){
   event.preventDefault();
 
   if($on_off){
     cellColor = $('#colorPicker').val();
     $(this).css('background-color', cellColor);
+
   }
   else{
     $(this).css('background-color', 'inherit');
-
+    
   }
   $on_off = !$on_off;
   });
@@ -38,7 +40,7 @@ $('#pixelCanvas').on('click','td', function(event){
 
 //call the makeGrid function on submit
 $(document).ready(
-  $('#sizePicker').submit(function (event) {
+  $("#sizePicker").submit(function (event) {
     event.preventDefault();
     makeGrid();
   }));
